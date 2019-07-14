@@ -25,6 +25,7 @@ namespace Entities
     public class Meter
     {
         public int MeterId { get; set; }
+        public string MeterRef { get; set; }
     }
 
     public class Contract
@@ -44,5 +45,6 @@ namespace Entities
 
         public Contract Contract { get; set; }
     }
+
 
 }
