@@ -22,7 +22,26 @@ namespace Entities
         public ICollection<Lead> Leads { get; set; }
     }
 
+    public class Contact
+    {
+        public int ContactId { get; set; }
+    }
 
+    public class Site
+    {
+        public int SiteId { get; set; }
+        public string Address { get; set; }
+        public Meter Meter { get; set; }
+    }
+
+    public class Meter
+    {
+        [ForeignKey("Site")]
+        public int MeterId { get; set; }
+        public string MeterRef { get; set; }
+
+        public Site Site { get; set; }
+    }
 
     public class Contract
     {
@@ -41,5 +60,6 @@ namespace Entities
 
         public Contract Contract { get; set; }
     }
+
 
 }
