@@ -25,6 +25,7 @@ namespace Entities
     public class Site
     {
         public int SiteId { get; set; }
+        public string Address { get; set; }
     }
 
     public class Meter
