@@ -22,6 +22,11 @@ namespace Entities
         public ICollection<Lead> Leads { get; set; }
     }
 
+    public class Contact
+    {
+        public int ContactId { get; set; }
+    }
+
     public class Site
     {
         public int SiteId { get; set; }
