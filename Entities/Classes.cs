@@ -22,7 +22,10 @@ namespace Entities
         public ICollection<Lead> Leads { get; set; }
     }
 
-
+    public class Meter
+    {
+        public int MeterId { get; set; }
+    }
 
     public class Contract
     {
