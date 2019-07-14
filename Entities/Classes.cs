@@ -26,12 +26,16 @@ namespace Entities
     {
         public int SiteId { get; set; }
         public string Address { get; set; }
+        public Meter Meter { get; set; }
     }
 
     public class Meter
     {
+        [ForeignKey("Site")]
         public int MeterId { get; set; }
         public string MeterRef { get; set; }
+
+        public Site Site { get; set; }
     }
 
     public class Contract
