@@ -20,11 +20,16 @@ namespace Entities
         public string Title { get; set; }
 
         public ICollection<Lead> Leads { get; set; }
+        public Contact Contact { get; set; }
     }
 
     public class Contact
     {
+        [ForeignKey("Company")]
         public int ContactId { get; set; }
+        public string FullName { get; set; }
+
+        public Company Company { get; set; }
     }
 
     public class Site
